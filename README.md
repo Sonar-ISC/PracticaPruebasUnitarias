@@ -23,18 +23,33 @@ Nota: Como se ha mencionado como tester es normal que no se tenga acceso al cód
 Se tiene un sistema que validad si un joven es apto para aplicar al programa de renta joven.
 > Este programa de Prosperidad Social es el resultado de la evolución de Jóvenes en Acción y beneficiará a jóvenes entre 14 y 28 años que se encuentran matriculados en Instituciones de Educación Superior (IES), el SENA y Escuelas Normales Superiores.
 
+```java
+isApplicable(int age);
+```
+
 ### Equivalencia
 
 Función que clasifica la calificación de un curso en 'Aprobado', 'Reprobado', o 'Excelente'. 'Aprobado' es una calificación de 60 a 89, 'Excelente' es 90 o más, y cualquier cosa menor a 60 es 'Reprobado'.
+```java
+categorizeGrade(string grade);
+```
+Los mensajes de error son:
+* Entrada inválida. Por favor, introduce un número válido.
+* Entrada inválida. La calificación debe estar entre 0 y 100.
 
 ### Tablas de decisión
 
 Función que simula un sistema de login. El acceso es concedido si el usuario y la contraseña son correctos. Existen dos roles: 'Admin' y 'Usuario', cada uno con un usuario y contraseña específicos.
 La entrada es un usuario y una contraseña, y la salida es un mensaje con el rol de usuario o un mensaje de error el cual es "Acceso denegado".
+```java
+verifyLogin(String username, String password);
+```
 
 ### Transición de estados
 
 Función que maneja las transiciones de estado de un pedido en línea: 'Pendiente', 'En Proceso', 'Enviado', 'Entregado'.
 La entrada es el estado actual y la acción a realizar, y la salida es el nuevo estado del pedido.
 Las acciones posibles son: 'Procesar', 'Enviar', 'Entregar'.
-
+```java
+updateOrderStatus(String currentStatus, String action);
+```

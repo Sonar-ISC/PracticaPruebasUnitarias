@@ -6,7 +6,15 @@ public class practice {
         return age > 14 && age <= 28;
     }
 
-    public static String categorizeGrade(int grade) {
+    public static String categorizeGrade(String input) {
+        if (input == null || input.trim().isEmpty() || !input.matches("\\d+")) {
+            return "Entrada inválida. Por favor, introduce un número válido.";
+        }
+        int grade = Integer.parseInt(input);
+        if (grade < 0 || grade > 100) {
+            return "Entrada inválida. La calificación debe estar entre 0 y 100.";
+        }
+
         if (grade >= 90) {
             return "Excelente";
         } else if (grade >= 60) {
